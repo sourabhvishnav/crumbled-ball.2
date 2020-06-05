@@ -17,7 +17,7 @@ function setup() {
 	engine = Engine.create();
 	world  = engine.world;
 
-	package = new Ball(120,450,20);
+	package = new Ball(80,420,20);
 	
 	d_Image = loadImage("dustbingreen.png");
     
@@ -38,7 +38,7 @@ function setup() {
 function draw() {
 
 	Engine.update(engine);
-	background(0);
+	background(80);
 
 
    ground.display();
@@ -57,7 +57,7 @@ function draw() {
 function keyPressed(){
 	if(keyCode === UP_ARROW) {
 
-		Matter.Body.applyForce(package.body,package.body.position,{x:14.5,y:-14.5});
+		Matter.Body.applyForce(package.body,package.body.position,{x:14.8,y:-14.5});
 		
 	}
 }

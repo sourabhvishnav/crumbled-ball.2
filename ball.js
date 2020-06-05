@@ -7,7 +7,7 @@ class Ball {
             friction:0.5,
             density:1.2
         }
-        
+        this.img = loadImage("paper.png")
         this.body = Matter.Bodies.circle(x, y, r/2, options);
         this.r =  r/2;
        
@@ -18,7 +18,7 @@ class Ball {
     display(){
        var pos = this.body.position;
        ellipseMode(RADIUS);
-       fill("yellow");
-       ellipse(pos.x,pos.y,this.r,this.r);
+       
+       image(this.img, pos.x, pos.y);
     }
 }
